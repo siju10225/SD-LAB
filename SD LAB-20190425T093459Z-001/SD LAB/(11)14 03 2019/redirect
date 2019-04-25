@@ -1,0 +1,118 @@
+student@T13:~$ ls -a >f1.txt
+student@T13:~$ wc -l >new.txt
+arya
+asha
+dona
+student@T13:~$  mypeogram 2>errorfile
+student@T13:~$ cat error.txt |more
+cat: error.txt: No such file or directory
+student@T13:~$ cat error.txt | more
+cat: error.txt: No such file or directory
+student@T13:~$ cd lechu
+student@T13:~/lechu$ cat osho.txt | more
+“If you love a flower, don’t pick it up.
+Because if you pick it up it dies and it ceases to be what you love.
+So if you love a flower, let it be.
+Love is not about possession.
+Love is about appreciation.” 
+student@T13:~/lechu$ cat osho.txt | head-3 | tail -2
+head-3: command not found
+student@T13:~/lechu$ cat osho.txt | head -3 | tail -2
+Because if you pick it up it dies and it ceases to be what you love.
+So if you love a flower, let it be.
+student@T13:~/lechu$ cat > mod.txt
+1
+2
+3
+4
+student@T13:~/lechu$ chmod u=rwx, g=rw, o=w mod.txt
+chmod: invalid mode: ‘u=rwx,’
+Try 'chmod --help' for more information.
+student@T13:~/lechu$ chmod u=rwx mod.txt
+student@T13:~/lechu$ chmod u=rwx,g=rw,o=w mod.txt
+student@T13:~/lechu$ ls -l mod.txt
+-rwxrw--w- 1 student student 8 Mar 14 15:18 mod.txt
+student@T13:~/lechu$ chmod u=x,g=x,o=x mod.txt
+student@T13:~/lechu$ ls -l mod.txt
+---x--x--x 1 student student 8 Mar 14 15:18 mod.txt
+student@T13:~/lechu$ chmod u=x,g=r,o=x mod.txt
+student@T13:~/lechu$ ls -l mod.txt
+---xr----x 1 student student 8 Mar 14 15:18 mod.txt
+student@T13:~/lechu$ cat mod.txt
+cat: mod.txt: Permission denied
+student@T13:~/lechu$ chmod u=r,g=r,o=r mod.txt
+student@T13:~/lechu$ ls -l mod.txt
+-r--r--r-- 1 student student 8 Mar 14 15:18 mod.txt
+student@T13:~/lechu$ chmod u=w,g=r,o=r mod.txt
+student@T13:~/lechu$ ls -l mod.txt
+--w-r--r-- 1 student student 8 Mar 14 15:18 mod.txt
+student@T13:~/lechu$ chmod u=4,g=4,o=4 mod.txt
+chmod: invalid mode: ‘u=4,g=4,o=4’
+Try 'chmod --help' for more information.
+student@T13:~/lechu$ chmod 444 mod.txt
+student@T13:~/lechu$ ls -l mod.txt
+-r--r--r-- 1 student student 8 Mar 14 15:18 mod.txt
+student@T13:~/lechu$ chmod 222 mod.txt
+student@T13:~/lechu$ ls -l mod.txt
+--w--w--w- 1 student student 8 Mar 14 15:18 mod.txt
+student@T13:~/lechu$ chmod 754  mod.txt
+student@T13:~/lechu$ ls -l mod.txt
+-rwxr-xr-- 1 student student 8 Mar 14 15:18 mod.txt
+student@T13:~/lechu$ chmod 222  mod.txt
+student@T13:~/lechu$ ls -l mod.txt
+--w--w--w- 1 student student 10 Mar 14 15:31 mod.txt
+student@T13:~/lechu$ chmod u+r+w,g+r+w,o+x mod.txt
+student@T13:~/lechu$ ls -l mod.txt
+-rw-rw--wx 1 student student 10 Mar 14 15:31 mod.txt
+student@T13:~/lechu$ chmod u+x,g+x,o+x mod.txt
+student@T13:~/lechu$ ls -l mod.txt
+-rwxrwx-wx 1 student student 10 Mar 14 15:31 mod.txt
+student@T13:~/lechu$ chmod u+w,g+w,o+w mod.txt
+student@T13:~/lechu$ ls -l mod.txt
+-rwxrwx-wx 1 student student 13 Mar 14 15:44 mod.txt
+student@T13:~/lechu$ chmod u+x,g+x,o+x budha.txt
+student@T13:~/lechu$ ls -l budha.txt
+-rwxr-xr-x 1 student student 784 Mar  7 15:42 budha.txt
+student@T13:~/lechu$ chmod 024 budha.txt
+student@T13:~/lechu$ ls -l budha.txt
+-----w-r-- 1 student student 789 Mar 14 15:46 budha.txt
+student@T13:~/lechu$ cat budha.txt
+cat: budha.txt: Permission denied
+student@T13:~/lechu$ cat >budha.txt
+bash: budha.txt: Permission denied
+student@T13:~/lechu$ wc -l budha.txt | more
+wc: budha.txt: Permission denied
+student@T13:~/lechu$ chmod 124 budha.txt
+student@T13:~/lechu$ wc -l budha.txt | more
+wc: budha.txt: Permission denied
+student@T13:~/lechu$ ls -l budha.txt
+---x-w-r-- 1 student student 789 Mar 14 15:46 budha.txt
+student@T13:~/lechu$ chmod 324 budha.txt
+student@T13:~/lechu$ wc -l budha.txt | more
+wc: budha.txt: Permission denied
+student@T13:~/lechu$ chmod 724 budha.txt
+student@T13:~/lechu$ wc -l budha.txt | more
+14 budha.txt
+student@T13:~/lechu$ chmod 124 budha.txt
+student@T13:~/lechu$ wc -l budha.txt 
+wc: budha.txt: Permission denied
+student@T13:~/lechu$ wc  budha.txt 
+wc: budha.txt: Permission denied
+student@T13:~/lechu$ chmod 324 budha.txt
+student@T13:~/lechu$ wc  budha.txt 
+wc: budha.txt: Permission denied
+student@T13:~/lechu$ wc -l budha.txt 
+wc: budha.txt: Permission denied
+student@T13:~/lechu$ chmod 700 budha.txt
+student@T13:~/lechu$ wc -l budha.txt 
+14 budha.txt
+student@T13:~/lechu$ chmod 111 budha.txt
+student@T13:~/lechu$ wc -l budha.txt 
+wc: budha.txt: Permission denied
+student@T13:~/lechu$ chmod 124 budha.txt
+student@T13:~/lechu$ ls -l budha.txt
+---x-w-r-- 1 student student 789 Mar 14 15:46 budha.txt
+student@T13:~/lechu$ wc -l budha.txt 
+wc: budha.txt: Permission denied
+student@T13:~/lechu$ 
+

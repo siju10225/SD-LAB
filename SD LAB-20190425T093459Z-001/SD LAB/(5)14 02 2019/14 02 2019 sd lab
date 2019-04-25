@@ -1,0 +1,71 @@
+student@T12:~/ajce$ cd lmca
+student@T12:~/ajce/lmca$ ls
+f1.txt  f3.txt~  f5.txt
+student@T12:~/ajce/lmca$ f1.txt /ajce/rmca
+f1.txt: command not found
+student@T12:~/ajce/lmca$ cp f1.txt /ajce/rmca
+cp: cannot create regular file '/ajce/rmca': No such file or directory
+student@T12:~/ajce/lmca$ cp f1.txt /ajce/rmca/k
+cp: cannot create regular file '/ajce/rmca/k': No such file or directory
+student@T12:~/ajce/lmca$ cp f1.txt /home/student/ajce/rmca
+student@T12:~/ajce/lmca$ cd ..
+student@T12:~/ajce$ cd rmca
+student@T12:~/ajce/rmca$ ls
+f1.txt
+student@T12:~/ajce/rmca$ cd ..
+student@T12:~/ajce$ cd lma
+'bash: cd: lma: No such file or directory
+student@T12:~/ajce$ cd lmca
+student@T12:~/ajce/lmca$ ls
+f1.txt  f3.txt~  f5.txt
+student@T12:~/ajce/lmca$ pwd
+/home/student/ajce/lmca
+student@T12:~/ajce/lmca$ cp *.txt intmca
+cp: target 'intmca' is not a directory
+student@T12:~/ajce/lmca$ cp *.txt ..
+student@T12:~/ajce/lmca$ cd ..
+student@T12:~/ajce$ ls
+f1.txt  f5.txt  intmca  lmca  rmca
+student@T12:~/ajce$ cp f1.txt f2.txt intmca
+cp: cannot stat 'f2.txt': No such file or directory
+student@T12:~/ajce$ cp f1.txt f5.txt intmca
+student@T12:~/ajce$ cd intmca 
+student@T12:~/ajce/intmca$ ls
+f1.txt  f5.txt
+student@T12:~/ajce/intmca$ mkdir arjun
+student@T12:~/ajce/intmca$ cd arjun
+student@T12:~/ajce/intmca/arjun$ cd ..
+student@T12:~/ajce/intmca$ cp arjun /home/student/ajce/lmca
+cp: -r not specified; omitting directory 'arjun'
+student@T12:~/ajce/intmca$ cp- arjun /home/student/ajce/lmca
+
+Command 'cp-' not found, did you mean:
+
+  command 'cpr' from deb node-cpr
+  command 'cpu' from deb cpu
+  command 'cpm' from deb cpm
+  command 'cp' from deb coreutils
+  command 'cpp' from deb cpp
+
+Try: apt install <deb name>
+
+student@T12:~/ajce/intmca$ cp -r arjun /home/student/ajce/lmca
+student@T12:~/ajce/intmca$ cd ..
+student@T12:~/ajce$ cd lmca
+student@T12:~/ajce/lmca$ ls
+arjun  f1.txt  f3.txt~  f5.txt
+student@T12:~/ajce/lmca$ man cp
+
+[1]+  Stopped                 man cp
+student@T12:~/ajce/lmca$ ls
+arjun  f1.txt  f3.txt~  f5.txt
+student@T12:~/ajce/lmca$ rm f1.txt
+student@T12:~/ajce/lmca$ ls
+arjun  f3.txt~  f5.txt
+student@T12:~/ajce/lmca$ rm f3.txt~ f5.txt
+student@T12:~/ajce/lmca$ ls
+arjun
+student@T12:~/ajce/lmca$ rm -R arjun
+student@T12:~/ajce/lmca$ ls
+student@T12:~/ajce/lmca$ 
+

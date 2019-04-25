@@ -1,0 +1,78 @@
+student@T13:~$ read a
+13
+student@T13:~$ echo $a
+13
+student@T13:~$ echo -e "\nhello\linux\n"
+
+hello\linux
+
+student@T13:~$ echo -e "\nhello linux\n"
+
+hello linux
+
+student@T13:~$ echo -e "\n hai \n\n linux\n"
+
+ hai 
+
+ linux
+
+student@T13:~$ echo -e "linux \t terminal \n echo \t and \t read "
+linux 	 terminal 
+ echo 	 and 	 read 
+student@T13:~$ echo -e "linux \t terminal \n echo \t and \b read "
+linux 	 terminal 
+ echo 	 and read 
+student@T13:~$ echo -e "echo \v options"
+echo 
+      options
+student@T13:~$ echo -e "echo \v options\v vertical tab"
+echo 
+      options
+              vertical tab
+student@T13:~$ read txt
+arya
+student@T13:~$ echo $txt
+arya
+student@T13:~$ man read
+student@T13:~$ read name
+aryalekshmi
+student@T13:~$ echo the name is $name
+the name is aryalekshmi
+student@T13:~$ read -p "enter username:" 
+enter username:arya
+student@T13:~$ echo username:$username
+username:
+student@T13:~$ echo "username:$username"
+username:
+student@T13:~$ read -p "enter username:" username
+enter username:arya
+student@T13:~$ echo "username :$username"
+username :arya
+student@T13:~$ man echo
+student@T13:~$ man read
+student@T13:~$ read -n 5
+1 2 3student@T13:~$  
+student@T13:~$ read -n 5
+12345student@T13:~$ 
+student@T13:~$ echo -n
+student@T13:~$ read -n 5 x
+13579student@T13:~$ 
+student@T13:~$ echo $x
+13579
+student@T13:~$ read -s -p "enter password : "password
+enter password : passwordstudent@T13:~$ 
+student@T13:~$ read -s -p "enter password :" passs
+enter password :student@T13:~$ 
+student@T13:~$ echo $pass
+
+student@T13:~$ echo $passs
+arya
+student@T13:~$ echo man
+man
+student@T13:~$ man man
+student@T13:~$ read a b
+10 11
+student@T13:~$ echo $a $b
+10 11
+student@T13:~$ 
+

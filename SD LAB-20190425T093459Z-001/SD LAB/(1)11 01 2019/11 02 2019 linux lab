@@ -1,0 +1,218 @@
+student@T12:~$ cd ajce
+bash: cd: ajce: No such file or directory
+student@T12:~$ mkdir ajce
+student@T12:~$ 
+student@T12:~$ cd mkdir
+bash: cd: mkdir: No such file or directory
+student@T12:~$ cd ajce
+student@T12:~/ajce$ mkdir lmca
+student@T12:~/ajce$ mkdir rmca
+student@T12:~/ajce$ cd lmca
+student@T12:~/ajce/lmca$ cd > f1.txt
+student@T12:~$ cat > f1.txt
+hai 
+arjun
+^Z
+[1]+  Stopped                 cat > f1.txt
+student@T12:~$ cat > f2.txt
+amaljyothi 
+kottayam
+^Z
+[2]+  Stopped                 cat > f2.txt
+student@T12:~$ cp f1.txt f2.txt
+student@T12:~$ cat f2.txt
+hai 
+arjun
+student@T12:~$ cat f1.txt
+hai 
+arjun
+student@T12:~$ man cp
+
+[3]+  Stopped                 man cp
+student@T12:~$ cat > f3.txt
+how are you
+^Z
+[4]+  Stopped                 cat > f3.txt
+student@T12:~$ cp -b f2.txt f3.txt
+student@T12:~$ cat f3.txt
+hai 
+arjun
+student@T12:~$ cat f3.txt~
+how are you
+student@T12:~$ ls
+ajce     Documents  examples.desktop  f2.txt  f3.txt~  Pictures  Templates
+Desktop  Downloads  f1.txt            f3.txt  Music    Public    Videos
+student@T12:~$ mv f1.txt ajce
+student@T12:~$ mv f2.txt ajce
+student@T12:~$ mv f3.txt ajce
+student@T12:~$ cd ajce
+student@T12:~/ajce$ ls
+f1.txt  f2.txt  f3.txt  lmca  rmca
+student@T12:~/ajce$ cd ..
+student@T12:~$ mv f3.txt~ ajce
+student@T12:~$ cd ajce
+student@T12:~/ajce$ ls
+f1.txt  f2.txt  f3.txt  f3.txt~  lmca  rmca
+student@T12:~/ajce$ mv f1.txt f2.txt f3.txt lmca
+student@T12:~/ajce$ cd lmca
+student@T12:~/ajce/lmca$ ls
+f1.txt  f2.txt  f3.txt
+student@T12:~/ajce/lmca$ cd ..
+student@T12:~/ajce$ mv f3.txt~ lmca
+student@T12:~/ajce$ cd lmca
+student@T12:~/ajce/lmca$ cp f1.txt rmca
+student@T12:~/ajce/lmca$ cd ..
+student@T12:~/ajce$ cd rmca
+student@T12:~/ajce/rmca$ ls
+student@T12:~/ajce/rmca$ cd ..
+student@T12:~/ajce$ cd lmca
+student@T12:~/ajce/lmca$ ls
+f1.txt  f2.txt  f3.txt  f3.txt~  rmca
+student@T12:~/ajce/lmca$ cp f1.txt rmca
+student@T12:~/ajce/lmca$ cat f1.txt
+hai 
+arjun
+student@T12:~/ajce/lmca$ cp f1.txt ..
+student@T12:~/ajce/lmca$ cd ..
+student@T12:~/ajce$ ls
+f1.txt  lmca  rmca
+student@T12:~/ajce$ cp f1.txt rmca
+student@T12:~/ajce$ cd rmca
+student@T12:~/ajce/rmca$ ls
+f1.txt
+student@T12:~/ajce/rmca$ cp -R f1.txt lmca
+student@T12:~/ajce/rmca$ cd ..
+student@T12:~/ajce$ cd lmca
+student@T12:~/ajce/lmca$ ls
+f1.txt  f2.txt  f3.txt  f3.txt~  rmca
+student@T12:~/ajce/lmca$ cd ..
+student@T12:~/ajce$ mkdir intmca
+student@T12:~/ajce$ cd intmca
+student@T12:~/ajce/intmca$ cd ..
+student@T12:~/ajce$ cd lmca
+student@T12:~/ajce/lmca$ cp -R f1.txt intmca
+student@T12:~/ajce/lmca$ cd ..
+student@T12:~/ajce$ cd intmca
+student@T12:~/ajce/intmca$ ls
+student@T12:~/ajce/intmca$ man cp
+
+[5]+  Stopped                 man cp
+student@T12:~/ajce/intmca$ cd ..
+student@T12:~/ajce$ cp -R lmca rmca
+cp: cannot overwrite non-directory 'rmca/lmca' with directory 'lmca'
+student@T12:~/ajce$ cp -R lmca rmca
+cp: cannot overwrite non-directory 'rmca/lmca' with directory 'lmca'
+student@T12:~/ajce$ cp -R lmca rmca
+student@T12:~/ajce$ cp -r lmca  rmca intmca
+student@T12:~/ajce$ cd intmca
+student@T12:~/ajce/intmca$ ls
+lmca  rmca
+student@T12:~/ajce/intmca$ cd ..
+student@T12:~/ajce$ cd lmca
+student@T12:~/ajce/lmca$ ls
+f1.txt  f2.txt  f3.txt  f3.txt~
+student@T12:~/ajce/lmca$ cp -i f1.txt f2.txt
+cp: overwrite 'f2.txt'? n
+student@T12:~/ajce/lmca$ cat f1.txt
+hai 
+arjun
+student@T12:~/ajce/lmca$ cat f2.txt
+hai 
+arjun
+student@T12:~/ajce/lmca$ cat f3.txt
+hai 
+arjun
+student@T12:~/ajce/lmca$ cat > f4.txt
+singam
+^Z
+[6]+  Stopped                 cat > f4.txt
+student@T12:~/ajce/lmca$ cp -i f4.txt f3.txt
+cp: overwrite 'f3.txt'? n
+student@T12:~/ajce/lmca$ cat f3.txt
+hai 
+arjun
+student@T12:~/ajce/lmca$ cat f4.txt
+singam
+student@T12:~/ajce/lmca$ ls
+f1.txt  f2.txt  f3.txt  f3.txt~  f4.txt
+student@T12:~/ajce/lmca$ man cp
+
+[7]+  Stopped                 man cp
+student@T12:~/ajce/lmca$ cp -f f3.txt f4.txt
+student@T12:~/ajce/lmca$ cat f3.txt
+hai 
+arjun
+student@T12:~/ajce/lmca$ cat f4.txt
+hai 
+arjun
+student@T12:~/ajce/lmca$ ls -l f4.txt
+-rw-r--r-- 1 student student 11 Feb 11 12:38 f4.txt
+student@T12:~/ajce/lmca$ man ls
+
+[8]+  Stopped                 man ls
+student@T12:~/ajce/lmca$ ls -l
+total 12
+-rw-r--r-- 1 student student 11 Feb 11 11:18 f1.txt
+-rw-r--r-- 1 student student 11 Feb 11 11:19 f2.txt
+-rw-r--r-- 1 student student 12 Feb 11 11:22 f3.txt~
+student@T12:~/ajce/lmca$ ls
+f1.txt  f2.txt  f3.txt~
+student@T12:~/ajce/lmca$ cp -f f2.txt f3.txt
+student@T12:~/ajce/lmca$ cat f3.txt
+hai 
+arjun
+student@T12:~/ajce/lmca$ ls
+f1.txt  f2.txt  f3.txt  f3.txt~
+student@T12:~/ajce/lmca$ man cp
+
+[9]+  Stopped                 man cp
+student@T12:~/ajce/lmca$ man cp
+
+[10]+  Stopped                 man cp
+student@T12:~/ajce/lmca$ cp -a f2.txt f3.txt
+student@T12:~/ajce/lmca$ cat f2.txt
+hai 
+arjun
+student@T12:~/ajce/lmca$ cat f3.txt
+hai 
+arjun
+student@T12:~/ajce/lmca$ man cp
+
+[11]+  Stopped                 man cp
+student@T12:~/ajce/lmca$ man cp
+
+[12]+  Stopped                 man cp
+student@T12:~/ajce/lmca$ ls
+f1.txt  f3.txt~
+student@T12:~/ajce/lmca$ cp --attributes-only f1.txt f2.txt
+student@T12:~/ajce/lmca$ cat f2.txt
+student@T12:~/ajce/lmca$ cat f1.txt
+hai 
+arjun
+student@T12:~/ajce/lmca$ man cp
+
+[13]+  Stopped                 man cp
+student@T12:~/ajce/lmca$ ls
+f1.txt  f2.txt  f3.txt~
+student@T12:~/ajce/lmca$ cp -p f2.txt f3.txt
+student@T12:~/ajce/lmca$ cat f3.txt
+student@T12:~/ajce/lmca$ cat f2.txt
+student@T12:~/ajce/lmca$ cat f1.txt
+hai 
+arjun
+student@T12:~/ajce/lmca$ man cp
+
+[14]+  Stopped                 man cp
+student@T12:~/ajce/lmca$ cp -d f1.txt f4.txt
+student@T12:~/ajce/lmca$ cat f1.txt
+hai 
+arjun
+student@T12:~/ajce/lmca$ cat f4.txt
+hai 
+arjun
+student@T12:~/ajce/lmca$ cat > f5.txt
+kottayam
+^Z
+[15]+  Stopped                 cat > f5.txt
+student@T12:~/ajce/lmca$ 
+

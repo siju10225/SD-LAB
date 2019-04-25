@@ -1,0 +1,170 @@
+student@T70:~$ mkdir commands
+student@T70:~$ cat >command.txt
+echo
+read
+mkdir
+cat
+^Z
+[1]+  Stopped                 cat > command.txt
+student@T70:~$ cat command.txt
+echo
+read
+mkdir
+cat
+student@T70:~$ ls
+a.py                     command.txt       linux              Templates
+arithematicoperators.py  Desktop           Music              Videos
+arithematicop.py         Documents         newarithematic.py
+arithematic.py           Downloads         Pictures
+commands                 examples.desktop  Public
+student@T70:~$ cd commands
+student@T70:~/commands$ mkdir display
+student@T70:~/commands$ cat >option.txt
+-b
+-n
+-s
+^Z
+[2]+  Stopped                 cat > option.txt
+student@T70:~/commands$ cat option.txt
+-b
+-n
+-s
+student@T70:~/commands$ cat >move.txt
+file1
+file2
+file3
+^Z
+[3]+  Stopped                 cat > move.txt
+student@T70:~/commands$ cat move.txt
+file1
+file2
+file3
+student@T70:~/commands$ mv move.txt option.txt
+student@T70:~/commands$ cat move.txt
+cat: move.txt: No such file or directory
+student@T70:~/commands$ cat option.txt
+file1
+file2
+file3
+student@T70:~/commands$ cat >names.txt
+arya
+fergy
+albina
+^Z
+[4]+  Stopped                 cat > names.txt
+student@T70:~/commands$ cat names.txt
+arya
+fergy
+albina
+student@T70:~/commands$ ls
+display  names.txt  option.txt
+student@T70:~/commands$ man mv
+student@T70:~/commands$ cat -i names.txt option.txt
+cat: invalid option -- 'i'
+Try 'cat --help' for more information.
+student@T70:~/commands$ mv -i names.txt option.txt
+mv: overwrite 'option.txt'? n
+student@T70:~/commands$ ls
+display  names.txt  option.txt
+student@T70:~/commands$ mv names.txt display
+student@T70:~/commands$ ls
+display  option.txt
+student@T70:~/commands$ mkdir output
+student@T70:~/commands$ ls
+display  option.txt  output
+student@T70:~/commands$ mv output display
+student@T70:~/commands$ ls
+display  option.txt
+student@T70:~/commands$ cat >course.txt
+mca
+m.tech
+b.tech
+^Z
+[5]+  Stopped                 cat > course.txt
+student@T70:~/commands$ cat course.txt
+mca
+m.tech
+b.tech
+student@T70:~/commands$ ls
+course.txt  display  option.txt
+student@T70:~/commands$ mv -n course.txt option.txt
+student@T70:~/commands$ ls
+course.txt  display  option.txt
+student@T70:~/commands$ mv -n course.txt option1.txt
+student@T70:~/commands$ ls
+display  option1.txt  option.txt
+student@T70:~/commands$ mv -b option.txt option1.txt
+student@T70:~/commands$ ls
+display  option1.txt  option1.txt~
+student@T70:~/commands$ cat option1.txt
+file1
+file2
+file3
+student@T70:~/commands$ cat option1.txt~
+mca
+m.tech
+b.tech
+student@T70:~/commands$ pwd
+/home/student/commands
+student@T70:~/commands$ cat >colg.txt
+amal jyothi
+kanjirappaly
+^Z
+[6]+  Stopped                 cat > colg.txt
+student@T70:~/commands$ cat colg.txt
+amal jyothi
+kanjirappaly
+student@T70:~/commands$ mv -u colg.txt option.txt
+student@T70:~/commands$ ls
+display  option1.txt  option1.txt~  option.txt
+student@T70:~/commands$ cat option.txt
+amal jyothi
+kanjirappaly
+student@T70:~/commands$ pwd
+/home/student/commands
+student@T70:~/commands$ ^C
+student@T70:~/commands$ mv -u option.txt u.txt
+student@T70:~/commands$ ls
+display  option1.txt  option1.txt~  u.txt
+student@T70:~/commands$ cat u.txt
+amal jyothi
+kanjirappaly
+student@T70:~/commands$ cat u.txt
+amal jyothi
+kanjirappaly
+student@T70:~/commands$ cat option.txt
+cat: option.txt: No such file or directory
+student@T70:~/commands$ ls
+display  option1.txt  option1.txt~  u.txt
+student@T70:~/commands$ mv -u option1.txt u.txt
+student@T70:~/commands$ ls
+display  option1.txt  option1.txt~  u.txt
+student@T70:~/commands$ cat u.txt
+amal jyothi
+kanjirappaly
+student@T70:~/commands$ cat option1.txt
+file1
+file2
+file3
+student@T70:~/commands$ mv -u u.txt option1.txt
+student@T70:~/commands$ ls
+display  option1.txt  option1.txt~
+student@T70:~/commands$ cat option1.txt
+amal jyothi
+kanjirappaly
+student@T70:~/commands$ man mv
+student@T70:~/commands$ ls
+display  option1.txt  option1.txt~
+student@T70:~/commands$ mkdir one
+student@T70:~/commands$ mkdir two
+student@T70:~/commands$ ls
+display  one  option1.txt  option1.txt~  two
+student@T70:~/commands$ mv -t display one two
+student@T70:~/commands$ ls
+display  option1.txt  option1.txt~
+student@T70:~/commands$ cat display
+cat: display: Is a directory
+student@T70:~/commands$ ls
+display  option1.txt  option1.txt~
+student@T70:~/commands$ 
+

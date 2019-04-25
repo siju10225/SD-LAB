@@ -1,0 +1,413 @@
+student@T13:~$ cat demo.txt
+1.arya
+2.arjun
+3.dona
+4.asha
+
+student@T13:~$ cd AJCE
+student@T13:~/AJCE$ cd MCA
+student@T13:~/AJCE/MCA$ cd RCMA
+bash: cd: RCMA: No such file or directory
+student@T13:~/AJCE/MCA$ cd RMCA
+student@T13:~/AJCE/MCA/RMCA$ cat > sample.txt
+hai
+hello
+^Z
+[1]+  Stopped                 cat > sample.txt
+student@T13:~/AJCE/MCA/RMCA$ cat sample.txt
+hai
+hello
+student@T13:~/AJCE/MCA/RMCA$ cd ..
+student@T13:~/AJCE/MCA$ cd LMCA
+student@T13:~/AJCE/MCA/LMCA$ cat >course.txt
+mobile computing
+machine learning
+big data
+advanced DBMS
+^Z
+[2]+  Stopped                 cat > course.txt
+student@T13:~/AJCE/MCA/LMCA$ cat course.txt
+mobile computing
+machine learning
+big data
+advanced DBMS
+student@T13:~/AJCE/MCA/LMCA$ cd ..
+student@T13:~/AJCE/MCA$ cd IMCA
+student@T13:~/AJCE/MCA/IMCA$ cat >faculty.txt
+shelly shiju           
+gloria
+anit
+jobin
+^Z
+[3]+  Stopped                 cat > faculty.txt
+student@T13:~/AJCE/MCA/IMCA$ cat faculty.txt
+shelly shiju
+gloria
+anit
+jobin
+student@T13:~/AJCE/MCA/IMCA$ cat >details.txt
+amal jyothi collage of engineering
+kanjirappally
+^Z
+[4]+  Stopped                 cat > details.txt
+student@T13:~/AJCE/MCA/IMCA$ cat details.txt
+amal jyothi collage of engineering
+kanjirappally
+student@T13:~/AJCE/MCA/IMCA$ cat *.txt
+amal jyothi collage of engineering
+kanjirappally
+shelly shiju
+gloria
+anit
+jobin
+student@T13:~/AJCE/MCA/IMCA$ cat -n faculty.txt
+     1	shelly shiju
+     2	gloria
+     3	anit
+     4	jobin
+student@T13:~/AJCE/MCA/IMCA$ cd /
+student@T13:/$ man cat
+student@T13:/$ cd AJCE
+bash: cd: AJCE: No such file or directory
+student@T13:/$ cd AJCE
+bash: cd: AJCE: No such file or directory
+student@T13:/$ cd ~
+student@T13:~$ cd AJCE
+student@T13:~/AJCE$ cd MCA
+student@T13:~/AJCE/MCA$ cd IMCA
+student@T13:~/AJCE/MCA/IMCA$ cat *.txt
+amal jyothi collage of engineering
+kanjirappally
+shelly shiju
+gloria
+anit
+jobin
+student@T13:~/AJCE/MCA/IMCA$ cat faculty.txt details.txt
+shelly shiju
+gloria
+anit
+jobin
+amal jyothi collage of engineering
+kanjirappally
+student@T13:~/AJCE/MCA/IMCA$ cat >student.txt
+Arya lekshmi
+08/09/95
+regular mca
+^Z
+[5]+  Stopped                 cat > student.txt
+student@T13:~/AJCE/MCA/IMCA$ cat -n student.txt
+     1	Arya lekshmi
+     2	08/09/95
+     3	regular mca
+student@T13:~/AJCE/MCA/IMCA$ cat student.txt > details.txt
+student@T13:~/AJCE/MCA/IMCA$ cat  details.txt
+Arya lekshmi
+08/09/95
+regular mca
+student@T13:~/AJCE/MCA/IMCA$ cat  student.txt
+Arya lekshmi
+08/09/95
+regular mca
+student@T13:~/AJCE/MCA/IMCA$ cat details.txt faculty.txt
+Arya lekshmi
+08/09/95
+regular mca
+shelly shiju
+gloria
+anit
+jobin
+student@T13:~/AJCE/MCA/IMCA$ cat * .txt
+Arya lekshmi
+08/09/95
+regular mca
+shelly shiju
+gloria
+anit
+jobin
+Arya lekshmi
+08/09/95
+regular mca
+cat: .txt: No such file or directory
+student@T13:~/AJCE/MCA/IMCA$ cat faculty.txt;details.txt
+shelly shiju
+gloria
+anit
+jobin
+details.txt: command not found
+student@T13:~/AJCE/MCA/IMCA$ cat faculty.txt;details.txt;
+shelly shiju
+gloria
+anit
+jobin
+details.txt: command not found
+student@T13:~/AJCE/MCA/IMCA$ cat faculty.txt;cat details.txt;
+shelly shiju
+gloria
+anit
+jobin
+Arya lekshmi
+08/09/95
+regular mca
+student@T13:~/AJCE/MCA/IMCA$ cd ..
+student@T13:~/AJCE/MCA$ cd LMCA
+student@T13:~/AJCE/MCA/LMCA$ cat >lab.txt
+android
+
+
+system lab
+^Z
+[6]+  Stopped                 cat > lab.txt
+student@T13:~/AJCE/MCA/LMCA$ cat -s lab.txt
+android
+
+system lab
+student@T13:~/AJCE/MCA/LMCA$ cat >commands.txt
+echo
+read
+man
+cd
+mkdir
+ls
+cat
+^Z
+[7]+  Stopped                 cat > commands.txt
+student@T13:~/AJCE/MCA/LMCA$ cat commands.txt
+echo
+read
+man
+cd
+mkdir
+ls
+cat
+student@T13:~/AJCE/MCA/LMCA$ cat lab.txt commands.txt >new.txt
+student@T13:~/AJCE/MCA/LMCA$ cat new.txt
+android
+
+
+system lab
+echo
+read
+man
+cd
+mkdir
+ls
+cat
+student@T13:~/AJCE/MCA/LMCA$ tac new.txt
+cat
+ls
+mkdir
+cd
+man
+read
+echo
+system lab
+
+
+android
+student@T13:~/AJCE/MCA/LMCA$ cat lab.txt >>commands.txt
+student@T13:~/AJCE/MCA/LMCA$ cat commands.txt
+echo
+read
+man
+cd
+mkdir
+ls
+cat
+android
+
+
+system lab
+student@T13:~/AJCE/MCA/LMCA$ cat lab.txt
+android
+
+
+system lab
+student@T13:~/AJCE/MCA/LMCA$ man cat
+student@T13:~/AJCE/MCA/LMCA$ cat -A new.txt
+android$
+$
+$
+system lab$
+echo$
+read$
+man$
+cd$
+mkdir$
+ls$
+cat$
+student@T13:~/AJCE/MCA/LMCA$ man cat
+student@T13:~/AJCE/MCA/LMCA$ cat -e lab.txt
+android$
+$
+$
+system lab$
+student@T13:~/AJCE/MCA/LMCA$ cat -b lab.txt
+     1	android
+
+
+     2	system lab
+student@T13:~/AJCE/MCA/LMCA$ cat -B lab.txt
+cat: invalid option -- 'B'
+Try 'cat --help' for more information.
+student@T13:~/AJCE/MCA/LMCA$ cat -n lab.txt
+     1	android
+     2	
+     3	
+     4	system lab
+student@T13:~/AJCE/MCA/LMCA$ man cat
+student@T13:~/AJCE/MCA/LMCA$ cat -b command.txt
+cat: command.txt: No such file or directory
+student@T13:~/AJCE/MCA/LMCA$ cat >new2.txt
+1
+2
+3
+^Z
+[8]+  Stopped                 cat > new2.txt
+student@T13:~/AJCE/MCA/LMCA$ cat new2.txt
+1
+2
+3
+student@T13:~/AJCE/MCA/LMCA$ mv commands.txt new2.txt
+student@T13:~/AJCE/MCA/LMCA$ ls new2.txt
+new2.txt
+student@T13:~/AJCE/MCA/LMCA$ ls
+course.txt  lab.txt  new2.txt  new.txt
+student@T13:~/AJCE/MCA/LMCA$ cat new2.txt
+echo
+read
+man
+cd
+mkdir
+ls
+cat
+
+student@T13:~/AJCE/MCA/LMCA$ cat commands.txt
+cat: commands.txt: No such file or directory
+student@T13:~/AJCE/MCA/LMCA$ mv -i lab.txt new2.txt
+mv: overwrite 'new2.txt'? n
+student@T13:~/AJCE/MCA/LMCA$ ls
+course.txt  lab.txt  new2.txt  new.txt
+student@T13:~/AJCE/MCA/LMCA$ mv -i course.txt new2.txt
+mv: overwrite 'new2.txt'? y
+student@T13:~/AJCE/MCA/LMCA$ mv -i course.txt new2.txt
+mv: cannot stat 'course.txt': No such file or directory
+student@T13:~/AJCE/MCA/LMCA$ ls
+lab.txt  new2.txt  new.txt
+student@T13:~/AJCE/MCA/LMCA$ mv lab.txt new.txt RMCA
+mv: target 'RMCA' is not a directory
+student@T13:~/AJCE/MCA/LMCA$ mv lab.txt  RMCA
+student@T13:~/AJCE/MCA/LMCA$ cd ..
+student@T13:~/AJCE/MCA$ cd RMCA
+student@T13:~/AJCE/MCA/RMCA$ ls
+sample.txt
+student@T13:~/AJCE/MCA/RMCA$ cd ..
+student@T13:~/AJCE/MCA$ cd LMCA
+student@T13:~/AJCE/MCA/LMCA$ LS
+
+Command 'LS' not found, but can be installed with:
+
+apt install sl
+Please ask your administrator.
+
+student@T13:~/AJCE/MCA/LMCA$ ls
+new2.txt  new.txt  RMCA
+student@T13:~/AJCE/MCA/LMCA$ cd ..
+student@T13:~/AJCE/MCA$ mv new.txt RMCA
+mv: cannot stat 'new.txt': No such file or directory
+student@T13:~/AJCE/MCA$ mv new.txt RMCA1
+mv: cannot stat 'new.txt': No such file or directory
+student@T13:~/AJCE/MCA$ mv new2.txt RMCA1
+mv: cannot stat 'new2.txt': No such file or directory
+student@T13:~/AJCE/MCA$ LS
+
+Command 'LS' not found, but can be installed with:
+
+apt install sl
+Please ask your administrator.
+
+student@T13:~/AJCE/MCA$ ls
+IMCA  LMCA  op.txt  out1.txt  out.txt  RMCA  RMCA1
+student@T13:~/AJCE/MCA$ mv out1.txt RMCA1
+student@T13:~/AJCE/MCA$ LS
+
+Command 'LS' not found, but can be installed with:
+
+apt install sl
+Please ask your administrator.
+
+student@T13:~/AJCE/MCA$ LS
+
+Command 'LS' not found, but can be installed with:
+
+apt install sl
+Please ask your administrator.
+
+student@T13:~/AJCE/MCA$ ls
+IMCA  LMCA  op.txt  out.txt  RMCA  RMCA1
+student@T13:~/AJCE/MCA$ cd RMCA
+student@T13:~/AJCE/MCA/RMCA$ LS
+
+Command 'LS' not found, but can be installed with:
+
+apt install sl
+Please ask your administrator.
+
+student@T13:~/AJCE/MCA/RMCA$ ls
+sample.txt
+student@T13:~/AJCE/MCA/RMCA$ cd ..
+student@T13:~/AJCE/MCA$ cd >move.txt
+student@T13:~$ 123
+123: command not found
+student@T13:~$ cd >move.txt
+student@T13:~$ 1
+1: command not found
+student@T13:~$ cd > move.txt
+student@T13:~$ 12
+12: command not found
+student@T13:~$ cat > move1.txt
+12
+13
+14
+^Z
+[9]+  Stopped                 cat > move1.txt
+student@T13:~$ cat  move1.txt
+12
+13
+14
+student@T13:~$ cd ~
+student@T13:~$ cd AJCE
+student@T13:~/AJCE$ cd MCA
+student@T13:~/AJCE/MCA$ LS
+
+Command 'LS' not found, but can be installed with:
+
+apt install sl
+Please ask your administrator.
+
+student@T13:~/AJCE/MCA$ ls
+IMCA  LMCA  move.txt  op.txt  out.txt  RMCA  RMCA1
+student@T13:~/AJCE/MCA$ mv move.txt RMCA1
+student@T13:~/AJCE/MCA$ cd RMCA1
+student@T13:~/AJCE/MCA/RMCA1$ ls
+move.txt  out1.txt
+student@T13:~/AJCE/MCA/RMCA1$ mv RMCA2 RMCA1
+mv: cannot stat 'RMCA2': No such file or directory
+student@T13:~/AJCE/MCA/RMCA1$ cd ..
+student@T13:~/AJCE/MCA$ mv RMCA2 RMCA1
+student@T13:~/AJCE/MCA$ ls
+IMCA  LMCA  op.txt  out.txt  RMCA  RMCA1
+student@T13:~/AJCE/MCA$ mv -n move1.txt out1.txt
+mv: cannot stat 'move1.txt': No such file or directory
+student@T13:~/AJCE/MCA$ cd RMCA1
+student@T13:~/AJCE/MCA/RMCA1$ mv -n move1.txt out1.txt
+mv: cannot stat 'move1.txt': No such file or directory
+student@T13:~/AJCE/MCA/RMCA1$ mv -n move.txt out1.txt
+student@T13:~/AJCE/MCA/RMCA1$ man mv
+student@T13:~/AJCE/MCA/RMCA1$ mv -f move.txt out1.txt
+student@T13:~/AJCE/MCA/RMCA1$ ls
+out1.txt  RMCA2
+student@T13:~/AJCE/MCA/RMCA1$ man mv
+student@T13:~/AJCE/MCA/RMCA1$ man cat
+student@T13:~/AJCE/MCA/RMCA1$ man cat
+student@T13:~/AJCE/MCA/RMCA1$ 
+

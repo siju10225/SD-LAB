@@ -1,0 +1,89 @@
+student@T12:~$ vi sampl.sh
+student@T12:~$ chmod u+x sampl.sh
+student@T12:~$ ./sampl.sh
+hello
+student@T12:~$ gedit sampl.sh
+student@T12:~$ chmod +x sampl.sh
+student@T12:~$ ./sampl.sh
+hello arjun
+student@T12:~$ geidt file.sh
+
+Command 'geidt' not found, did you mean:
+
+  command 'gedit' from snap gedit (3.30.2+git14.bed83e929)
+  command 'gedit' from deb gedit
+
+See 'snap info <snapname>' for additional versions.
+
+student@T12:~$ gedit file.sh
+student@T12:~$ chmod +x file.sh
+student@T12:~$ ./file.sh
+hello worid
+the date today is Thu Mar 21 14:30:38 IST 2019
+the current directory /home/student
+student@T12:~$ gedit hai.sh
+student@T12:~$ chmod +x hai.sh
+student@T12:~$ ./hai.sh
+value of var is test string
+student@T12:~$ gedit hai2.sh
+student@T12:~$ chmod +x hai2.sh
+student@T12:~$ ./hai2.sh
+./hai2.sh: line 1: var: command not found
+value of var is $var
+student@T12:~$ gedit hai3.sh
+student@T12:~$ chmod +x hai3.sh
+student@T12:~$ ./hai3.sh
+this command is ./hai3.sh
+the first argument is 
+the second argument is 
+the third argument is 
+the fourth argument is 
+student@T12:~$ ./hai3.sh 1 2 3 4
+this command is ./hai3.sh
+the first argument is 1
+the second argument is 2
+the third argument is 3
+the fourth argument is 4
+student@T12:~$ gedit hai3.sh
+student@T12:~$ ./hai3.sh c v b g
+this command is ./hai3.sh
+the first argument is 4
+the second argument is c v b g
+the third argument is c v b g
+student@T12:~$ gedit arjun.sh
+student@T12:~$ chmod +x arjun.sh
+student@T12:~$ ./arjun.sh
+
+
+student@T12:~$ gedit arjun.sh
+student@T12:~$ gedit arj1.sh
+student@T12:~$ chmod +x arj1.sh
+student@T12:~$ ./arj1.sh
+5+10=15
+student@T12:~$ gedit arj2.sh
+student@T12:~$ chmod +x arj2.sh
+student@T12:~$ ./arj2.sh
+enter two numbers: 5
+./arj2.sh: line 3: echo #x+=5: command not found
+student@T12:~$ ./arj2.sh
+enter two numbers: 5 6
+./arj2.sh: line 3: echo #x+6=11: command not found
+student@T12:~$ gedit arj2.sh
+student@T12:~$ chmod +x arj2.sh
+student@T12:~$ ./arj2.sh
+enter two numbers: 5 6
+./arj2.sh: line 3: echo 5+6=11: command not found
+student@T12:~$ gedit arj2.sh
+student@T12:~$ chmod +x arj2.sh
+student@T12:~$ ./arj2.sh
+enter two numbers: 1 3
+1+3=4
+student@T12:~$ gedit arj3.sh
+student@T12:~$ chmod +x arj3.sh
+student@T12:~$ ./arj3.sh
+sum is 10+20
+student@T12:~$ gedit arj3.sh
+student@T12:~$ chmod +x arj3.sh
+student@T12:~$ ./arj3.sh
+sum is 30
+

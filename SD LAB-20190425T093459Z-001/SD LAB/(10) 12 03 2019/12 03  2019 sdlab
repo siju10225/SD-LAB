@@ -1,0 +1,104 @@
+student@T12:~$ mkdir MCA
+student@T12:~$ cd MCA
+student@T12:~/MCA$ expr `2+3`
+2+3: command not found
+expr: missing operand
+Try 'expr --help' for more information.
+student@T12:~/MCA$ expr 2 + 3
+5
+student@T12:~/MCA$ expr `2 + 5`
+2: command not found
+expr: missing operand
+Try 'expr --help' for more information.
+student@T12:~/MCA$ expr  2 /* 5
+expr: syntax error
+student@T12:~/MCA$ expr 2 / * 5
+expr: non-integer argument
+student@T12:~/MCA$ expr 2 /* 5
+expr: syntax error
+student@T12:~/MCA$ expr 2 \* 5
+10
+student@T12:~/MCA$ y=10
+student@T12:~/MCA$ y= expr $y+1
+10+1
+student@T12:~/MCA$ y= expr $y + 1
+11
+student@T12:~/MCA$ echo $y
+10
+student@T12:~/MCA$ echo y
+y
+student@T12:~/MCA$ echo "enter two numbers"
+enter two numbers
+student@T12:~/MCA$ read x 
+5
+student@T12:~/MCA$ read y
+2
+student@T12:~/MCA$ sum=`expr $x + $y`
+student@T12:~/MCA$ echo "sum=$sum"
+sum=7
+student@T12:~/MCA$ echo "enter two numbers"
+enter two numbers
+student@T12:~/MCA$ read a
+9
+student@T12:~/MCA$ read b
+5
+student@T12:~/MCA$ product=`expr $x \* $y`
+student@T12:~/MCA$ echo "product=$product"
+product=10
+student@T12:~/MCA$ product=`expr $b \* $b`
+student@T12:~/MCA$ echo "product=$product"
+product=25
+student@T12:~/MCA$ echo y
+y
+student@T12:~/MCA$ z=11
+student@T12:~/MCA$ y=`expr $y+1`
+student@T12:~/MCA$ echo "y is $y"
+y is 2+1
+student@T12:~/MCA$ z=`expr $z+1`
+student@T12:~/MCA$ echo "z is $z"
+z is 11+1
+student@T12:~/MCA$ z=`expr $z + 1`
+expr: non-integer argument
+student@T12:~/MCA$ e=3
+student@T12:~/MCA$ e=`expr $e + 1`
+student@T12:~/MCA$ echo $e
+4
+
+student@T12:~/MCA$ y=10
+student@T12:~/MCA$ x=12
+student@T12:~/MCA$ z=`expr $y \< $x`
+student@T12:~/MCA$ echo $z
+1
+student@T12:~/MCA$ z=`expr $y \> $x`
+student@T12:~/MCA$ echo $z
+0
+student@T12:~/MCA$ z=`expr $y = $x`
+student@T12:~/MCA$ echo $z
+0
+student@T12:~/MCA$ z=`expr $y \!= $x`
+student@T12:~/MCA$ echo $z
+1
+student@T12:~/MCA$ x=arjun
+student@T12:~/MCA$ len=`expr length $x`
+student@T12:~/MCA$ echo $len
+5
+student@T12:~/MCA$ x=arjunkoorara
+student@T12:~/MCA$ len=`expr length $x`
+student@T12:~/MCA$ echo $len
+12
+student@T12:~/MCA$ x=arjunkoorara
+student@T12:~/MCA$ len=`expr sbstr $x 2 5`
+expr: syntax error
+student@T12:~/MCA$ len=`expr substr $x 2 5`
+student@T12:~/MCA$ echo $len
+rjunk
+student@T12:~/MCA$ expr arjun : arjunkoorara
+0
+student@T12:~/MCA$ expr arju : midhun
+0
+student@T12:~/MCA$ expr arjuNOP : arjun
+0
+student@T12:~/MCA$ expr arjunop : arjun
+5
+student@T12:~/MCA$ 
+

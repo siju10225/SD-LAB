@@ -1,0 +1,93 @@
+student@T12:~$ cd ajce
+student@T12:~/ajce$ find
+.
+./lmca
+./lmca/f2.txt
+./lmca/f3.txt
+./lmca/f4.txt
+./lmca/f1.txt
+./rmca
+./rmca/ar
+./rmca/ar/midhun
+./rmca/hai.txt
+./rmca/f2.txt
+./rmca/f3.txt
+./rmca/f1.txt
+./rmca/f5.txt
+./intmca
+./intmca/a.txt
+./intmca/hai.txt
+./intmca/f3.txt
+./intmca/f5.txt
+./f1.txt
+./f5.txt
+student@T12:~/ajce$ find .
+.
+./lmca
+./lmca/f2.txt
+./lmca/f3.txt
+./lmca/f4.txt
+./lmca/f1.txt
+./rmca
+./rmca/ar
+./rmca/ar/midhun
+./rmca/hai.txt
+./rmca/f2.txt
+./rmca/f3.txt
+./rmca/f1.txt
+./rmca/f5.txt
+./intmca
+./intmca/a.txt
+./intmca/hai.txt
+./intmca/f3.txt
+./intmca/f5.txt
+./f1.txt
+./f5.txt
+student@T12:~/ajce$ find . -name hai.txt
+./rmca/hai.txt
+./intmca/hai.txt
+student@T12:~/ajce$ find ./rmca -perm 644
+./rmca/f2.txt
+./rmca/f3.txt
+./rmca/f1.txt
+./rmca/f5.txt
+student@T12:~/ajce$ find ./rmca -iname f1.txt
+./rmca/f1.txt
+
+
+
+
+
+student@T12:~$ cd ajce
+student@T12:~/ajce$ ls
+f1.txt  f5.txt  intmca  lmca  rmca
+student@T12:~/ajce$ cd intmca
+student@T12:~/ajce/intmca$ ls
+a.txt  f3.txt  f5.txt  hai.txt
+student@T12:~/ajce/intmca$ tar -czvf f.tar.gz.intmca 
+tar: Cowardly refusing to create an empty archive
+Try 'tar --help' or 'tar --usage' for more information.
+student@T12:~/ajce/intmca$ tar -czvf f.tar.gz intmca 
+tar: intmca: Cannot stat: No such file or directory
+tar: Exiting with failure status due to previous errors
+student@T12:~/ajce/intmca$ tar -xzvf f.tar.gz
+student@T12:~/ajce/intmca$ ls
+a.txt  f3.txt  f5.txt  f.tar.gz  hai.txt
+student@T12:~/ajce/intmca$ tar -czvf com.tar.gz *.txt 
+a.txt
+f3.txt
+f5.txt
+hai.txt
+student@T12:~/ajce/intmca$ tar -xzvf com.tar.gz
+a.txt
+f3.txt
+f5.txt
+hai.txt
+student@T12:~/ajce/intmca$ 
+
+
+
+student@T12:~/ajce$ find ./intmca -name *.txt
+find: paths must precede expression: `f5.txt'
+find: possible unquoted pattern after predicate `-name'?
+

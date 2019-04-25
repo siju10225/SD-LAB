@@ -1,0 +1,98 @@
+student@T12:~$ cd ajce
+student@T12:~/ajce$ cd lmca
+student@T12:~/ajce/lmca$ ls
+f1.txt  f2.txt  f3.txt  f4.txt
+student@T12:~/ajce/lmca$ cd ..
+student@T12:~/ajce$ cd rmca
+student@T12:~/ajce/rmca$ ls
+f1.txt  f2.txt  f3.txt  f5.txt  hai.txt
+student@T12:~/ajce/rmca$ head hai.txt
+arjun op
+arya lakshmi
+siju
+hai iam arjun sreesivam
+amaljyothi engineering college of engineering 
+kanjirapally
+kottayam
+student of the year
+chythu
+midhun
+student@T12:~/ajce/rmca$ head -15 hai.txt
+arjun op
+arya lakshmi
+siju
+hai iam arjun sreesivam
+amaljyothi engineering college of engineering 
+kanjirapally
+kottayam
+student of the year
+chythu
+midhun
+josaph 
+jk
+jomy
+sandheep
+vishnu
+student@T12:~/ajce/rmca$ head -5 hai.txt
+arjun op
+arya lakshmi
+siju
+hai iam arjun sreesivam
+amaljyothi engineering college of engineering 
+student@T12:~/ajce/rmca$ man head
+
+[1]+  Stopped                 man head
+student@T12:~/ajce/rmca$ head c hai.txt
+head: cannot open 'c' for reading: No such file or directory
+==> hai.txt <==
+arjun op
+arya lakshmi
+siju
+hai iam arjun sreesivam
+amaljyothi engineering college of engineering 
+kanjirapally
+kottayam
+student of the year
+chythu
+midhun
+student@T12:~/ajce/rmca$ man head
+
+[2]+  Stopped                 man head
+student@T12:~/ajce/rmca$ head -c hai.txt
+head: invalid number of bytes: ‘hai.txt’
+student@T12:~/ajce/rmca$ man head
+
+[3]+  Stopped                 man head
+student@T12:~/ajce/rmca$ head -v hai.txt
+==> hai.txt <==
+arjun op
+arya lakshmi
+siju
+hai iam arjun sreesivam
+amaljyothi engineering college of engineering 
+kanjirapally
+kottayam
+student of the year
+chythu
+midhun
+student@T12:~/ajce/rmca$ head -n 10 hai.txt | tail -n 1 
+midhun
+student@T12:~/ajce/rmca$ head -c 5  hai.txt
+arjunstudent@T12:~/ajce/rmca$ tail hai.txt
+chythu
+midhun
+josaph 
+jk
+jomy
+sandheep
+vishnu
+asha
+arjun a
+
+student@T12:~/ajce/rmca$ head -n 3 hai.txt
+arjun op
+arya lakshmi
+siju
+student@T12:~/ajce/rmca$ head -c 2 hai.txt
+arstudent@T12:~/ajce/rmca$ 
+

@@ -1,0 +1,136 @@
+student@T12:~$ cd op repo
+bash: cd: too many arguments
+student@T12:~$ cd op_repo
+student@T12:~/op_repo$ git init myrepo
+Initialized empty Git repository in /home/student/op_repo/myrepo/.git/
+student@T12:~/op_repo$ cd myrepo
+student@T12:~/op_repo/myrepo$ gedit arjun.txt
+student@T12:~/op_repo/myrepo$ git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	arjun.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+student@T12:~/op_repo/myrepo$ git add myfile1.txt
+fatal: pathspec 'myfile1.txt' did not match any files
+student@T12:~/op_repo/myrepo$ git add arjun.txt
+student@T12:~/op_repo/myrepo$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+
+	new file:   arjun.txt
+
+student@T12:~/op_repo/myrepo$ git commit -m "arjun.txt commit"
+[master (root-commit) c8d6347] arjun.txt commit
+ 1 file changed, 4 insertions(+)
+ create mode 100644 arjun.txt
+student@T12:~/op_repo/myrepo$ git commit -m "arjun.txt commit"
+On branch master
+nothing to commit, working tree clean
+student@T12:~/op_repo/myrepo$ git remote add origin https://github.com/arjunopmokeri/ajce.git
+student@T12:~/op_repo/myrepo$ git push origin master
+Username for 'https://github.com': arjunopmokeri
+Password for 'https://arjunopmokeri@github.com': 
+Counting objects: 3, done.
+Writing objects: 100% (3/3), 246 bytes | 246.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+To https://github.com/arjunopmokeri/ajce.git
+ * [new branch]      master -> master
+student@T12:~/op_repo/myrepo$ git branch
+* master
+student@T12:~/op_repo/myrepo$ git branch newbranch
+student@T12:~/op_repo/myrepo$ git branch
+* master
+  newbranch
+student@T12:~/op_repo/myrepo$ git checkout newbranch
+Switched to branch 'newbranch'
+student@T12:~/op_repo/myrepo$ git add *
+student@T12:~/op_repo/myrepo$ git commit -m "commit for branch"
+On branch newbranch
+nothing to commit, working tree clean
+student@T12:~/op_repo/myrepo$ git push origin newbranch
+Username for 'https://github.com': arjunopmokeri
+Password for 'https://arjunopmokeri@github.com': 
+remote: Invalid username or password.
+fatal: Authentication failed for 'https://github.com/arjunopmokeri/ajce.git/'
+student@T12:~/op_repo/myrepo$ git push origin newbranch
+Username for 'https://github.com': arjunopmokeri
+Password for 'https://arjunopmokeri@github.com': 
+Total 0 (delta 0), reused 0 (delta 0)
+remote: 
+remote: Create a pull request for 'newbranch' on GitHub by visiting:
+remote:      https://github.com/arjunopmokeri/ajce/pull/new/newbranch
+remote: 
+To https://github.com/arjunopmokeri/ajce.git
+ * [new branch]      newbranch -> newbranch
+student@T12:~/op_repo/myrepo$ git clone https://github.com/arjunopmokeri/ajce
+Cloning into 'ajce'...
+remote: Enumerating objects: 3, done.
+remote: Counting objects: 100% (3/3), done.
+remote: Total 3 (delta 0), reused 3 (delta 0), pack-reused 0
+Unpacking objects: 100% (3/3), done.
+student@T12:~/op_repo/myrepo$ git clone https://github.com/arjunopmokeri/ajce
+fatal: destination path 'ajce' already exists and is not an empty directory.
+student@T12:~/op_repo/myrepo$ git fetch origin newbranch
+From https://github.com/arjunopmokeri/ajce
+ * branch            newbranch  -> FETCH_HEAD
+student@T12:~/op_repo/myrepo$ git status
+On branch newbranch
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	ajce/
+
+nothing added to commit but untracked files present (use "git add" to track)
+student@T12:~/op_repo/myrepo$ gedit new.txt
+student@T12:~/op_repo/myrepo$ git add new.txt
+student@T12:~/op_repo/myrepo$ git status
+On branch newbranch
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+	new file:   new.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	ajce/
+
+student@T12:~/op_repo/myrepo$ git commit -m "new.txt commit"
+[newbranch 6810688] new.txt commit
+ 1 file changed, 1 insertion(+)
+ create mode 100644 new.txt
+student@T12:~/op_repo/myrepo$ git branch
+  master
+* newbranch
+student@T12:~/op_repo/myrepo$ git branch -a
+  master
+* newbranch
+  remotes/origin/master
+  remotes/origin/newbranch
+student@T12:~/op_repo/myrepo$ git branch new2branch
+student@T12:~/op_repo/myrepo$ git status
+On branch newbranch
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	ajce/
+
+nothing added to commit but untracked files present (use "git add" to track)
+student@T12:~/op_repo/myrepo$ git branch
+  master
+  new2branch
+* newbranch
+student@T12:~/op_repo/myrepo$ git branch -d new2branch
+Deleted branch new2branch (was 6810688).
+student@T12:~/op_repo/myrepo$ 
+

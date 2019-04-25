@@ -1,0 +1,45 @@
+student@T28:~$ cd ajce
+student@T28:~/ajce$ cd mca
+student@T28:~/ajce/mca$ cd rmca
+student@T28:~/ajce/mca/rmca$ ls
+f1.txt  f2.txt  f2.txt~  f3.txt  file.txt  g.txt  r.txt  sd.txt  se.txt
+student@T28:~/ajce/mca/rmca$ ls -a > f5.txt
+student@T28:~/ajce/mca/rmca$ wc -l < f5.txt
+12
+student@T28:~/ajce/mca/rmca$ wc -l  f5.txt
+12 f5.txt
+student@T28:~/ajce/mca/rmca$ wc < f5.txt
+12 12 76
+student@T28:~/ajce/mca/rmca$ cat  f1.txt|more
+meenu
+anju
+ammu 
+appu
+annu
+akku	
+student@T28:~/ajce/mca/rmca$ cat  f1.txt|head -7|tail -5
+anju
+ammu 
+appu
+annu
+akku	
+student@T28:~/ajce/mca/rmca$ cat  f1.txt|head -5|tail -2
+appu
+annu
+student@T28:~/ajce/mca/rmca$ ls -l f1.txt|wc
+      1       9      52
+student@T28:~/ajce/mca/rmca$ ls -l f1.txt
+-rw-r--r-- 1 student student 33 Feb 18 11:59 f1.txt
+student@T28:~/ajce/mca/rmca$ ls -l  f1.txt
+-rw-r--r-- 1 student student 33 Feb 18 11:59 f1.txt
+student@T28:~/ajce/mca/rmca$ ls -l  se.txt
+-rw-r--r-- 1 student student 114 Feb 25 11:32 se.txt
+student@T28:~/ajce/mca/rmca$ ls -l  se.txt
+-rw-r--r-- 1 student student 114 Feb 25 11:32 se.txt
+student@T28:~/ajce/mca/rmca$ ls -l f1.txt|wc
+      1       9      52
+student@T28:~/ajce/mca/rmca$ cat f1.txt|wc
+      6       6      33
+student@T28:~/ajce/mca/rmca$ f1.txt 2>f2.txt
+student@T28:~/ajce/mca/rmca$ 
+

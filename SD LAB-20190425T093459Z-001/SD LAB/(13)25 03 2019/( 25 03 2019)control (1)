@@ -1,0 +1,124 @@
+1.
+
+echo -e "Enter a number:\c"
+read number
+if [ $number -lt 0 ] 
+then
+echo "negative"
+elif [ $number -eq 0 ]
+then
+echo zero
+else
+echo positive
+fi
+
+student@T13:~$ chmod +x control.sh
+student@T13:~$ ./control.sh
+Enter a number:2
+positive
+student@T13:~$ ./control.sh
+Enter a number:-8
+negative
+student@T13:~$ ./control.sh
+Enter a number:0
+zero
+
+
+2.
+
+if [ "$1" == "monday" ]
+then
+ echo "The typed argument is Monday."
+
+elif [ "$1" == "tuesday" ]
+ then
+  echo "Typed argument is tuesday"
+else
+ echo "typed argument is neither monday or tuesday"
+fi
+
+
+
+student@T13:~$ ./check.sh tuesday
+Typed argument is tuesday
+student@T13:~$ ./check.sh wednesday
+typed argument is neither monday or tuesday
+student@T13:~$ 
+
+
+3.
+
+for i in 3 2 5 7
+do
+echo "$i times 5 is $(( $i * 5 )) "
+done
+
+
+student@T13:~$ chmod +x for.sh
+student@T13:~$ ./for.sh
+3 times 5 is 15 
+2 times 5 is 10 
+5 times 5 is 25 
+7 times 5 is 35 
+
+
+4.
+
+for i in {1..5}
+do
+echo "welcome $i times "
+done
+
+
+student@T13:~$ chmod +x for1.sh
+student@T13:~$ ./for1.sh
+welcome 1 times 
+welcome 2 times 
+welcome 3 times 
+welcome 4 times 
+welcome 5 times 
+
+5.
+
+for i in {0..10..2}
+do
+echo "welcome $i times"
+done
+
+
+student@T13:~$ gedit for2.sh
+student@T13:~$ ./for2.sh
+welcome 0 times
+welcome 2 times
+welcome 4 times
+welcome 6 times
+welcome 8 times
+welcome 10 times
+
+
+6.
+
+
+for (( c=1; c<=5; c++ ))
+do
+echo "welcome $c times"
+done
+
+student@T13:~$ gedit for3.sh
+student@T13:~$ chmod +x for3.sh
+student@T13:~$ ./for3.sh
+welcome 1 times
+welcome 2 times
+welcome 3 times
+welcome 4 times
+welcome 5 times
+
+7.
+
+for (( ; ; ))
+do
+echo "infinite loop [hit CNTRL +c to stop ]"
+done
+
+infinite loop
+

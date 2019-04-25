@@ -1,0 +1,139 @@
+student@T12:~$ cd ajce
+student@T12:~/ajce$ cd intmca
+student@T12:~/ajce/intmca$ cat arjun
+
+
+Tigers are self sufficient, courageous predators that know what they want and know how to get it. This makes them quite formidable in competition.
+
+WHERE THEY ARE FOUND
+Bangladesh, Bhutan, China, India, Indonesia, Laos, Malaysia, Myanmar, Nepal, Russia, and Thailand.
+
+WHY THEY ARE IMPORTANT
+As well as being a majestic animal, in their role as top predator, tigers keep their habitat healthy by stabilizing the populations of quick breeding grazing animals such as deer. These grass eaters would overgraze and create imbalance in the habitat if their numbers went unchecked.
+
+HOW THEY ARE THREATENED BY ILLEGAL TRADE
+Poaching is the leading threat to wild tigers. It is believed that there are many medicinal beliefs attached to the body parts particularly tiger bone.
+
+HOW YOU CAN HELP
+learn more about how many animals, like tigers, are a symbol of the health of the forests they inhabit; these same forests secure water, mitigate climate change, and provide a host of natural resources required for healthy human populations. So when we protect magnificent species we are also ensuring our own health and well-being.
+
+CITES Listing: Tigers have been included in Appendix I since the beginning of the Convention in 1975, with the exception of Panthera tigtis altaica (Siberian Tiger), which was listed in Appendix II. All tiger sub-species were included in Appendix I in 1987. International commercial trade in specimens of tigers is prohibited.
+
+FACTSHEET FROM OUR COLLABORATOR, PANTHERA:
+student@T12:~/ajce/intmca$ grep tiger arjun.txt
+grep: arjun.txt: No such file or directory
+student@T12:~/ajce/intmca$ grep "tiger" arjun.txt
+grep: arjun.txt: No such file or directory
+student@T12:~/ajce/intmca$ grep "prohibited" arjun.txt
+grep: arjun.txt: No such file or directory
+student@T12:~/ajce/intmca$ grep "prohibited" arjun.txt
+grep: arjun.txt: No such file or directory
+student@T12:~/ajce/intmca$ cd ..
+student@T12:~/ajce$ cd ..
+student@T12:~$ cd mine
+student@T12:~/mine$ grep "wild" mine.txt
+grep: mine.txt: No such file or directory
+student@T12:~/mine$ grep "wild" mine.txt
+grep: mine.txt: No such file or directory
+student@T12:~/mine$ grep wild mine.txt
+grep: mine.txt: No such file or directory
+student@T12:~/mine$ grep "wild" data.txt
+Poaching is the leading threat to wild tigers.
+student@T12:~/mine$ grep "prohibited" arjun.txt
+grep: arjun.txt: No such file or directory
+student@T12:~/mine$ cd ..
+student@T12:~$ cd ajce
+student@T12:~/ajce$ cd intmca
+student@T12:~/ajce/intmca$ grep "tiger" a.txt
+As well as being a majestic animal, in their role as top predator, tigers keep their habitat healthy by stabilizing the populations of quick breeding grazing animals such as deer. These grass eaters would overgraze and create imbalance in the habitat if their numbers went unchecked.
+Poaching is the leading threat to wild tigers. It is believed that there are many medicinal beliefs attached to the body parts particularly tiger bone.
+learn more about how many animals, like tigers, are a symbol of the health of the forests they inhabit; these same forests secure water, mitigate climate change, and provide a host of natural resources required for healthy human populations. So when we protect magnificent species we are also ensuring our own health and well-being.
+CITES Listing: Tigers have been included in Appendix I since the beginning of the Convention in 1975, with the exception of Panthera tigtis altaica (Siberian Tiger), which was listed in Appendix II. All tiger sub-species were included in Appendix I in 1987. International commercial trade in specimens of tigers is prohibited.
+student@T12:~/ajce/intmca$ man grep
+
+[1]+  Stopped                 man grep
+student@T12:~/ajce/intmca$ grep -v "begginning" a.txt
+
+
+Tigers are self sufficient, courageous predators that know what they want and know how to get it. This makes them quite formidable in competition.
+
+WHERE THEY ARE FOUND
+Bangladesh, Bhutan, China, India, Indonesia, Laos, Malaysia, Myanmar, Nepal, Russia, and Thailand.
+
+WHY THEY ARE IMPORTANT
+As well as being a majestic animal, in their role as top predator, tigers keep their habitat healthy by stabilizing the populations of quick breeding grazing animals such as deer. These grass eaters would overgraze and create imbalance in the habitat if their numbers went unchecked.
+
+HOW THEY ARE THREATENED BY ILLEGAL TRADE
+Poaching is the leading threat to wild tigers. It is believed that there are many medicinal beliefs attached to the body parts particularly tiger bone.
+
+HOW YOU CAN HELP
+learn more about how many animals, like tigers, are a symbol of the health of the forests they inhabit; these same forests secure water, mitigate climate change, and provide a host of natural resources required for healthy human populations. So when we protect magnificent species we are also ensuring our own health and well-being.
+
+CITES Listing: Tigers have been included in Appendix I since the beginning of the Convention in 1975, with the exception of Panthera tigtis altaica (Siberian Tiger), which was listed in Appendix II. All tiger sub-species were included in Appendix I in 1987. International commercial trade in specimens of tigers is prohibited.
+
+FACTSHEET FROM OUR COLLABORATOR, PANTHERA:
+student@T12:~/ajce/intmca$ grep -i "predators" a.txt
+Tigers are self sufficient, courageous predators that know what they want and know how to get it. This makes them quite formidable in competition.
+student@T12:~/ajce/intmca$ grep -i "Tiger" a.txt
+Tigers are self sufficient, courageous predators that know what they want and know how to get it. This makes them quite formidable in competition.
+As well as being a majestic animal, in their role as top predator, tigers keep their habitat healthy by stabilizing the populations of quick breeding grazing animals such as deer. These grass eaters would overgraze and create imbalance in the habitat if their numbers went unchecked.
+student@T12:~/ajce/intmca$ grep -c "predators" a.txt
+1
+student@T12:~/ajce/intmca$ grep -l "tiger" *
+a.txt
+student@T12:~/ajce/intmca$ grep -l "arjun" *
+f3.txt
+hai.txt
+student@T12:~/ajce/intmca$ grep -w "predators" a.txt
+Tigers are self sufficient, courageous predators that know what they want and know how to get it. This makes them quite formidable in competition.
+student@T12:~/ajce/intmca$ grep -o "tiger" a.txt
+tiger
+student@T12:~/ajce/intmca$ grep -n "tiger" a.txt
+9:As well as being a majestic animal, in their role as top predator, tigers keep their habitat healthy by stabilizing the populations of quick breeding grazing animals such as deer. These grass eaters would overgraze and create imbalance in the habitat if their numbers went unchecked.
+student@T12:~/ajce/intmca$ grep -n "in" a.txt
+3:Tigers are self sufficient, courageous predators that know what they want and know how to get it. This makes them quite formidable in competition.
+6:Bangladesh, Bhutan, China, India, Indonesia, Laos, Malaysia, Myanmar, Nepal, Russia, and Thailand.
+9:As well as being a majestic animal, in their role as top predator, tigers keep their habitat healthy by stabilizing the populations of quick breeding grazing animals such as deer. These grass eaters would overgraze and create imbalance in the habitat if their numbers went unchecked.
+student@T12:~/ajce/intmca$ grep  "^tiger" a.txt
+student@T12:~/ajce/intmca$ grep  "^in" a.txt
+student@T12:~/ajce/intmca$ grep  "^why" a.txt
+student@T12:~/ajce/intmca$ grep  "^WHY" a.txt
+WHY THEY ARE IMPORTANT
+student@T12:~/ajce/intmca$ egrep 
+Usage: grep [OPTION]... PATTERN [FILE]...
+Try 'grep --help' for more information.
+student@T12:~/ajce/intmca$ egrep "china|arjun" a.txt hai.txt
+hai.txt:arjun op
+hai.txt:hai iam arjun sreesivam
+hai.txt:arjun a
+student@T12:~/ajce/intmca$ egrep "china|arjun"  hai.txt a.txt
+hai.txt:arjun op
+hai.txt:hai iam arjun sreesivam
+hai.txt:arjun a
+student@T12:~/ajce/intmca$ egrep "tiger|arjun"  hai.txt a.txt
+hai.txt:arjun op
+hai.txt:hai iam arjun sreesivam
+hai.txt:arjun a
+a.txt:As well as being a majestic animal, in their role as top predator, tigers keep their habitat healthy by stabilizing the populations of quick breeding grazing animals such as deer. These grass eaters would overgraze and create imbalance in the habitat if their numbers went unchecked.
+student@T12:~/ajce/intmca$ grep -B2 "tiger" a.txt
+
+WHY THEY ARE IMPORTANT
+As well as being a majestic animal, in their role as top predator, tigers keep their habitat healthy by stabilizing the populations of quick breeding grazing animals such as deer. These grass eaters would overgraze and create imbalance in the habitat if their numbers went unchecked.
+student@T12:~/ajce/intmca$ grep -B2 "FOUND" a.txt
+Tigers are self sufficient, courageous predators that know what they want and know how to get it. This makes them quite formidable in competition.
+
+WHERE THEY ARE FOUND
+student@T12:~/ajce/intmca$ grep -B2 "FOUND" a.txt
+Tigers are self sufficient, courageous predators that know what they want and know how to get it.
+This makes them quite formidable in competition.
+WHERE THEY ARE FOUND
+student@T12:~/ajce/intmca$ grep -A2 "FOUND" a.txt
+WHERE THEY ARE FOUND
+Bangladesh, Bhutan, China, India, Indonesia, Laos, Malaysia, Myanmar, Nepal, Russia, and Thailand.
+WHY THEY ARE IMPORTANT
+student@T12:~/ajce/intmca$ grep  "end$" a.txt
+student@T12:~/ajce/intmca$ grep  "unchecked$" a.txt
+student@T12:~/ajce/intmca$ grep  "unchecked.$" a.txt
+These grass eaters would overgraze and create imbalance in the habitat if their numbers went unchecked.
+student@T12:~/ajce/intmca$ 
+

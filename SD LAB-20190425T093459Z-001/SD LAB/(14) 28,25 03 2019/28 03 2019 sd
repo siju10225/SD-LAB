@@ -1,0 +1,92 @@
+student@T12:~$ gedit evenodd.sh
+student@T12:~$ chmod +x evenodd.sh
+student@T12:~$ ./evenodd.sh
+enter a number 
+5
+5 is odd
+student@T12:~$ ./evenodd.sh
+enter a number 
+6
+6 is even
+student@T12:~$ 
+student@T12:~$ gedit leap.sh
+student@T12:~$ chmod +x leap.sh
+student@T12:~$ ./leap.sh
+enter a year
+1900 
+1900 is a leapyear
+student@T12:~$ ./leap.sh
+enter a year
+2020
+2020 is a leapyear
+student@T12:~$ ./leap.sh
+enter a year
+2001
+2001 is not a leapyear
+student@T12:~$ gedit odd.sh
+student@T12:~$ chmod +x odd.sh
+student@T12:~$ ./odd.sh
+./odd.sh: line 1: [: : integer expression expected
+./odd.sh: line 4: [: too many arguments
+ is equal to 
+student@T12:~$ gedit odd.sh
+student@T12:~$ ./odd.sh
+./odd.sh: line 1: [: : integer expression expected
+./odd.sh: line 4: [: : integer expression expected
+ is equal to 
+student@T12:~$ gedit revers.sh
+student@T12:~$ chmod +x revers.sh
+student@T12:~$ ./revers.sh
+enter a limit
+5
+./revers.sh: line 3: syntax error near unexpected token `c=$n'
+./revers.sh: line 3: `for [ c=$n; c<=1; c-- ]'
+student@T12:~$ gedit revers.sh
+student@T12:~$ ./revers.sh
+enter a limit
+5
+./revers.sh: line 3: syntax error near unexpected token `c=$n'
+./revers.sh: line 3: `for [ c=$n; c>=1; c-- ]'
+student@T12:~$ gedit revers.sh
+student@T12:~$ ./revers.sh
+enter a limit
+3
+3
+3
+3
+student@T12:~$ gedit revers.sh
+student@T12:~$ ./revers.sh
+enter a limit
+6
+6
+5
+4
+3
+2
+1
+student@T12:~$ gedit revers.sh
+student@T12:~$ 
+student@T12:~$ gedit mult.sh
+student@T12:~$ chmod +x mult.sh
+student@T12:~$ ./mult.sh
+enter a number
+3
+1 * 3 = 3
+2 * 3 = 6
+3 * 3 = 9
+4 * 3 = 12
+5 * 3 = 15
+6 * 3 = 18
+7 * 3 = 21
+8 * 3 = 24
+9 * 3 = 27
+10 * 3 = 30
+student@T12:~$ 
+student@T12:~$ gedit prime.sh
+student@T12:~$ chmod +x prime.sh
+student@T12:~$ ./prime.sh
+Enter the number
+9
+Not Prime
+student@T12:~$ 
+

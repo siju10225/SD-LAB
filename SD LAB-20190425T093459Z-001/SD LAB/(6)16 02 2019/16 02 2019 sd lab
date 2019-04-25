@@ -1,0 +1,182 @@
+student@T12:~$ cd ajce
+student@T12:~/ajce$ cd rmca
+student@T12:~/ajce/rmca$ ls
+f1.txt
+student@T12:~/ajce/rmca$ cd > f2.txt
+student@T12:~$ cat > f2.txt
+1
+2
+3
+4
+5
+6
+7
+8
+arjun
+^Z
+[1]+  Stopped                 cat > f2.txt
+student@T12:~$ wc f2.txt
+ 9  9 22 f2.txt
+student@T12:~$ cat f2.txt
+1
+2
+3
+4
+5
+6
+7
+8
+arjun
+student@T12:~$ ls
+'11 02 2019 linux lab'   beardman    Downloads          Music      Public
+'14 02 2019 sd lab'      Desktop     examples.desktop   Pictures   Templates
+ ajce                    Documents   lab                popo       Videos
+student@T12:~$ cd ajce
+student@T12:~/ajce$ cd rmca
+student@T12:~/ajce/rmca$ ls
+f1.txt  f2.txt
+student@T12:~/ajce/rmca$ cat f2.txt
+1
+2
+3
+4
+5
+6
+7
+8
+arjun
+student@T12:~/ajce/rmca$ wc -l f2.txt
+9 f2.txt
+student@T12:~/ajce/rmca$ wc -c f2.txt
+22 f2.txt
+student@T12:~/ajce/rmca$ wc -m f2.txt
+22 f2.txt
+student@T12:~/ajce/rmca$ wc -L f2.txt
+5 f2.txt
+student@T12:~/ajce/rmca$ cat > f3.txt
+arjun
+midhun op
+i am from kannur 
+amljyothi collage
+^Z
+[2]+  Stopped                 cat > f3.txt
+student@T12:~/ajce/rmca$ cat f3.txt
+arjun
+midhun op
+i am from kannur
+amljyothi collage
+student@T12:~/ajce/rmca$ wc f3.txt
+ 4  9 51 f3.txt
+student@T12:~/ajce/rmca$ wc -i f3.txt
+wc: invalid option -- 'i'
+Try 'wc --help' for more information.
+student@T12:~/ajce/rmca$ wc -l f3.txt
+4 f3.txt
+student@T12:~/ajce/rmca$ wc -c f3.txt
+51 f3.txt
+student@T12:~/ajce/rmca$ wc -m f3.txt
+51 f3.txt
+student@T12:~/ajce/rmca$ wc -L f3.txt
+17 f3.txt
+student@T12:~/ajce/rmca$ wc -w f3.txt
+9 f3.txt
+student@T12:~/ajce/rmca$ cut -c4 f3.txt
+u
+h
+m
+j
+student@T12:~/ajce/rmca$ cut -c4,5,1 f3.txt
+aun
+mhu
+im 
+ajy
+student@T12:~/ajce/rmca$ man cut
+
+[3]+  Stopped                 man cut
+student@T12:~/ajce/rmca$ cut -b 1,2,3 f3.txt
+arj
+mid
+i a
+aml
+student@T12:~/ajce/rmca$ man cut
+
+[4]+  Stopped                 man cut
+student@T12:~/ajce/rmca$ cut -c 2,3,4 f3.txt
+rju
+idh
+ am
+mlj
+student@T12:~/ajce/rmca$ cat f3.txt
+arjun
+midhun op
+i am from kannur
+amljyothi collage
+student@T12:~/ajce/rmca$ man cut
+
+[5]+  Stopped                 man cut
+student@T12:~/ajce/rmca$ cut -d 2,4 f3.txt
+cut: the delimiter must be a single character
+Try 'cut --help' for more information.
+student@T12:~/ajce/rmca$ cut -d 2 f3.txt
+cut: you must specify a list of bytes, characters, or fields
+Try 'cut --help' for more information.
+student@T12:~/ajce/rmca$ cat > f5.txt
+fgfgy	fjjgkj	vhhjfg
+aretuy	kjjh	jkldsjlk
+^Z
+[6]+  Stopped                 cat > f5.txt
+student@T12:~/ajce/rmca$ cut -f 2 f3.txt
+arjun
+midhun op
+i am from kannur
+amljyothi collage
+student@T12:~/ajce/rmca$ cut -f 2 f5.txt
+fjjgkj
+kjjh
+student@T12:~/ajce/rmca$ cut -f 6 f3.txt
+arjun
+midhun op
+i am from kannur
+amljyothi collage
+student@T12:~/ajce/rmca$ cut -d 2 f3.txt
+cut: you must specify a list of bytes, characters, or fields
+Try 'cut --help' for more information.
+student@T12:~/ajce/rmca$ cut -d 2 f5.txt
+cut: you must specify a list of bytes, characters, or fields
+Try 'cut --help' for more information.
+student@T12:~/ajce/rmca$ man cut
+
+[7]+  Stopped                 man cut
+student@T12:~/ajce/rmca$ cut -d, -f 2 f5.txt
+fgfgy	fjjgkj	vhhjfg
+aretuy	kjjh	jkldsjlk
+student@T12:~/ajce/rmca$ cut -d 2 f5.txt
+cut: you must specify a list of bytes, characters, or fields
+Try 'cut --help' for more information.
+student@T12:~/ajce/rmca$ cut -d, -f 2 f5.txt
+fgfgy	fjjgkj	vhhjfg
+aretuy	kjjh	jkldsjlk
+student@T12:~/ajce/rmca$ cut -d, -f 2 f1.txt
+hai 
+arjun
+student@T12:~/ajce/rmca$ cut -d + -f 2 f1.txt
+hai 
+arjun
+student@T12:~/ajce/rmca$ cut -d + -f 1 f1.txt
+hai 
+arjun
+student@T12:~/ajce/rmca$ cat f1.txt
+hai 
+arjun
+student@T12:~/ajce/rmca$ cut -d + -f 1 f3.txt
+arjun
+midhun, op
+i am from kannur
+amljyothi
+student@T12:~/ajce/rmca$ cut -d , -f 1 f3.txt
+arjun
+midhun
+i am from kannur
+amljyothi+ collage
+student@T12:~/ajce/rmca$ 
+
